@@ -54,7 +54,7 @@ resource "aws_s3_bucket_object" "bootstrap_files" {
 
   bucket  = aws_s3_bucket.bucket.id
   key     = each.value
-  content = "${path.root}/files/${each.value}"
+  source  = "${path.root}/files/${each.value}"
 }
 
 resource "aws_iam_role" "bootstrap" {
