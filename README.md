@@ -55,7 +55,7 @@ module "panos-bootstrap" {
 
 ## Utilization
 
-The module output will provide values for the `bucket_id` and `instance_profile_name`.  The `bucket_id` value can then be used in a `aws_instance` resource to instantiate a VM-Series instance.  It is used in the `user-data` parameter.  The `instance_profile_name` value is used in the `iam_instance_profile` parameter.  Both are neeeded to define the location of the S3 bootstrap bucket and the permissions needed to access it.
+The module output will provide values for the `bucket_id` and `instance_profile_name`.  The `bucket_id` value can then be used in a `aws_instance` resource to instantiate a VM-Series instance.  It is used in the `user-data` parameter.  The `instance_profile_name` value is used in the `iam_instance_profile` parameter.  Both are needed to define the location of the S3 bootstrap bucket and the permissions needed to access it.
 
 ```terraform
 resource "aws_instance" "fw" {
